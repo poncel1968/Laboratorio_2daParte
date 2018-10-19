@@ -38,14 +38,18 @@ int cliente_isEmpty (cliente* aux[],int limite)
 {
     int retorno = -1;
     int i;
-    for (i=0;i<limite;i++)
+    if (aux != NULL)
     {
-       if (aux[i]==NULL)
-       {
-            retorno = i;
-            break;
-       }
+        for (i=0;i<limite;i++)
+        {
+            if (aux[i]==NULL)
+            {
+                retorno = i;
+                break;
+            }
+        }
     }
+
     return retorno;
 }
 
@@ -60,3 +64,51 @@ int cliente_getNombre(cliente* aux, char* nombre)
     }
     return retorno;
 }
+
+int cliente_init(cliente* aux[],int limite )
+{
+    int retorno =-1;
+
+    if (aux !=NULL)
+    {
+        int i;
+        for(i=0;i<limite;i++)
+        {
+            aux[i]=NULL;
+        }
+        retorno=0;
+    }
+
+    return retorno;
+}
+
+// modificar para que devuelva un puntero a cliente
+
+int cliente_getById(cliente* array[], int limite, int id)
+{
+    int i;
+    int retorno = -1;
+    cliente* aux;
+    for(i=0;i<limite;i++)
+    {
+        aux = array[i];
+        if (aux != NULL && aux->id == id)
+        {
+            retorno = i;
+            break;
+        }
+    }
+    return retorno;
+}
+
+int cliente_deleteCliente(cliente* this)
+{
+    int retorno=-1;
+    if (this != NULL)
+    {
+        free(this);
+        retorno=0;
+    }
+    return retorno;
+}
+

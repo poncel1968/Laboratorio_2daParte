@@ -10,12 +10,7 @@ int main()
     cliente* pArrayClientes[CANTIDAD];
     int IndiceArray;
 
-    int i;
-    for(i=0;i<CANTIDAD;i++)
-    {
-        pArrayClientes[i]=NULL;
-    }
-
+    cliente_init(pArrayClientes,CANTIDAD);
     aux= cliente_newCliente();
     IndiceArray=cliente_isEmpty (pArrayClientes,CANTIDAD);
     printf("Indice seleccionado %d \n",IndiceArray);

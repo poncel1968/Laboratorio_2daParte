@@ -1,13 +1,13 @@
 # depslib dependency file v1.0
-1539906233 source:/home/alumno/Descargas/Laboratorio_2daParte/Punteros2/Punteros2/cliente.c
+1539910588 source:/home/alumno/Descargas/Laboratorio_2daParte/Punteros2/Punteros2/cliente.c
 	"cliente.h"
 	<stdlib.h>
 	<stdio.h>
 	<string.h>
 
-1539908003 /home/alumno/Descargas/Laboratorio_2daParte/Punteros2/Punteros2/cliente.h
+1539910650 /home/alumno/Descargas/Laboratorio_2daParte/Punteros2/Punteros2/cliente.h
 
-1539906723 source:/home/alumno/Descargas/Laboratorio_2daParte/Punteros2/Punteros2/main.c
+1539909452 source:/home/alumno/Descargas/Laboratorio_2daParte/Punteros2/Punteros2/main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
