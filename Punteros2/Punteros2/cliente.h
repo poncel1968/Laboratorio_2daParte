@@ -11,5 +11,6 @@ cliente* cliente_newCliente(void);
 int cliente_setNombre (cliente* aux,char* nombre);
 int cliente_setId (cliente* aux,int id);
 int cliente_isEmpty (cliente* aux[],int limite);
+int cliente_getNombre(cliente* thi, char* nombre);
 
 #endif // CLIENTE_H_INCLUDED

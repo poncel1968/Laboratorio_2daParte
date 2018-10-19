@@ -18,7 +18,6 @@ int main()
 
     aux= cliente_newCliente();
     IndiceArray=cliente_isEmpty (pArrayClientes,CANTIDAD);
-
     printf("Indice seleccionado %d \n",IndiceArray);
 
     if (aux != NULL)
