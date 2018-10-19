@@ -112,3 +112,17 @@ int cliente_deleteCliente(cliente* this)
     return retorno;
 }
 
+cliente* cliente_newClienteParametros(char* nombre, int id)
+{
+    cliente* aux;
+    aux = cliente_newCliente();
+    if (aux !=NULL)
+    {
+        if (cliente_setNombre(aux,nombre)==-1 || cliente_setId(aux,id)==-1)
+        {
+            cliente_deleteCliente(aux);
+        }
+    }
+
+
+}
