@@ -27,7 +27,9 @@ int main()
         switch(option)
         {
             case 1:
+                printf("Tamaño antes : %d \n",ll_len(listaEmpleados));
                 controller_loadFromText("data.csv",listaEmpleados);
+                printf("Tamaño despues : %d \n",ll_len(listaEmpleados));
                 option = 10;
                 break;
         }

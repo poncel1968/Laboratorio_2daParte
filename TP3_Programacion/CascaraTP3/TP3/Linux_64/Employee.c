@@ -19,17 +19,18 @@ void Employee_delete(Employee* this)
     free(this);
 }
 
-Employee* Employee_newConParametros(int id,char* nombre,int horasTrabajadas,int sueldo)
+Employee* Employee_newConParametros(char* idStr,char* nombre,char* horasTrabajadasStr,char* sueldoStr)
 {
     Employee* this;
     this=Employee_new();
 
-    if(
-    !Employee_setId(this,id)&&
-    !Employee_setNombre(this,nombre)&&
-    !Employee_setHorasTrabajadas(this,horasTrabajadas)&&
-    !Employee_setSueldo(this,sueldo))
-        return this;
+
+    if(!Employee_setId(this,atoi(idStr))&& !Employee_setNombre(this,nombre)&& !Employee_setHorasTrabajadas(this,atoi(horasTrabajadasStr))&&
+    !Employee_setSueldo(this,atoi(sueldoStr)))
+    {
+         return this;
+    }
+
 
     Employee_delete(this);
     return NULL;
@@ -131,4 +132,5 @@ int Employee_getSueldo(Employee* this,int* sueldo)
     }
     return retorno;
 }
+
 
