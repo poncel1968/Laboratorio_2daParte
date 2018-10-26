@@ -16,6 +16,8 @@ Employee* Employee_new()
 
 void Employee_delete(Employee* this)
 {
+
+
     free(this);
 }
 
@@ -132,5 +134,6 @@ int Employee_getSueldo(Employee* this,int* sueldo)
     }
     return retorno;
 }
+
 
 

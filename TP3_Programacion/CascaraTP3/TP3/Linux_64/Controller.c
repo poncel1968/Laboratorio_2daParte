@@ -45,6 +45,7 @@ int controller_loadFromBinary(char* path , LinkedList* pArrayListEmployee)
  */
 int controller_addEmployee(LinkedList* pArrayListEmployee)
 {
+
     return 1;
 }
 
@@ -81,7 +82,25 @@ int controller_removeEmployee(LinkedList* pArrayListEmployee)
  */
 int controller_ListEmployee(LinkedList* pArrayListEmployee)
 {
-    return 1;
+    int retorno = -1;
+    int i;
+    Employee* auxPunteroEmpleado;
+    char nombre[50];
+
+    if(pArrayListEmployee != NULL )
+    {
+        retorno=0;
+        for (i=0;i<ll_len(pArrayListEmployee);i++)
+        {
+            auxPunteroEmpleado=ll_get(pArrayListEmployee,i);
+            Employee_getNombre(auxPunteroEmpleado,nombre);
+            printf("\n Nombre: %s",nombre);
+
+        }
+
+    }
+
+    return retorno;
 }
 
 /** \brief Ordenar empleados
